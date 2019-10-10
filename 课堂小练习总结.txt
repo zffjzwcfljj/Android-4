@@ -1,0 +1,26 @@
+*button标注的是红色
+- 这个报错意思是：组件没有锁定，重合了
+所有的组件都不重叠
+添加约束，添加对上下左右的约束，点击inferconstraints后自动生成
+Button
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" 
+
+TextView
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.458"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.248"
+
+
+* abstract 抽象  
+错误: MainActivity不是抽象的, 并且未覆盖OnClickListener中的抽象方法onClick(View)
+- 不能让入口类为抽象的，遵循了OnClickListener协议之后，就必须实现协议中的所有required接口，否则只能通过把当前类定义为抽象的。必须传一个实现了Onclick协议的类，Main没有实现，所以传不进去。
+
+
+
+*E/memtrack: Couldn't load memtrack module
+- 大量出现这个，其实只是这个项目绑定了一个已经存在的库，出现红色是因为修改过的没有放到git里面。和git有关，与报错无关。一开始以为是环境变量或者路径出现问题。
